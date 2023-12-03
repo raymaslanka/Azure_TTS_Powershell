@@ -58,7 +58,7 @@ foreach ($row in $data) {
 "@
     Try {
         $response = Invoke-RestMethod -Uri "$endpoint/cognitiveservices/v1" -Headers $headers -Method POST -Body $requestBody -OutFile $outputFile
-        Write-Host "Speech synthesis completed. Output file: $outputFile"
+        Write-Host "Speech synthesis completed. See output file: $outputFile"
     } Catch {
         Write-Host "ERROR: There is a problem requesting the file $outputFile :"
         if($_.ErrorDetails.Message) {
